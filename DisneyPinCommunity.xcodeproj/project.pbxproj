@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5022401A62004F6506 /* AppDelegate.swift */; };
-		28A38D5322401A62004F6506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5222401A62004F6506 /* ViewController.swift */; };
-		28A38D5622401A62004F6506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D5422401A62004F6506 /* Main.storyboard */; };
 		28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5722401A62004F6506 /* DisneyPinCommunity.xcdatamodeld */; };
 		28A38D5B22401A64004F6506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D5A22401A64004F6506 /* Assets.xcassets */; };
 		28A38D5E22401A64004F6506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D5C22401A64004F6506 /* LaunchScreen.storyboard */; };
 		28A38D6922401A64004F6506 /* DisneyPinCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D6822401A64004F6506 /* DisneyPinCommunityTests.swift */; };
 		28A38D7422401A64004F6506 /* DisneyPinCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D7322401A64004F6506 /* DisneyPinCommunityUITests.swift */; };
+		28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D8122402C94004F6506 /* UIViewControllerExtensions.swift */; };
+		28A38D8722402EA1004F6506 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D8522402EA1004F6506 /* HomeViewController.swift */; };
+		28A38D8822402EA1004F6506 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D8622402EA1004F6506 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* Begin PBXFileReference section */
 		28A38D4D22401A62004F6506 /* DisneyPinCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyPinCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A38D5022401A62004F6506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28A38D5222401A62004F6506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		28A38D5522401A62004F6506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28A38D5822401A62004F6506 /* DisneyPinCommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyPinCommunity.xcdatamodel; sourceTree = "<group>"; };
 		28A38D5A22401A64004F6506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A38D5D22401A64004F6506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		28A38D6F22401A64004F6506 /* DisneyPinCommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyPinCommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A38D7322401A64004F6506 /* DisneyPinCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyPinCommunityUITests.swift; sourceTree = "<group>"; };
 		28A38D7522401A64004F6506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28A38D8122402C94004F6506 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		28A38D8522402EA1004F6506 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		28A38D8622402EA1004F6506 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				28A38D5022401A62004F6506 /* AppDelegate.swift */,
-				28A38D5222401A62004F6506 /* ViewController.swift */,
-				28A38D5422401A62004F6506 /* Main.storyboard */,
+				28A38D8922402EF3004F6506 /* Extensions */,
+				28A38D8A22402F03004F6506 /* Model */,
+				28A38D8B22402F07004F6506 /* View */,
+				28A38D8C22402F11004F6506 /* Controller */,
 				28A38D5A22401A64004F6506 /* Assets.xcassets */,
 				28A38D5C22401A64004F6506 /* LaunchScreen.storyboard */,
 				28A38D5F22401A64004F6506 /* Info.plist */,
@@ -126,6 +130,37 @@
 				28A38D7522401A64004F6506 /* Info.plist */,
 			);
 			path = DisneyPinCommunityUITests;
+			sourceTree = "<group>";
+		};
+		28A38D8922402EF3004F6506 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28A38D8122402C94004F6506 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28A38D8A22402F03004F6506 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		28A38D8B22402F07004F6506 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28A38D8C22402F11004F6506 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28A38D8522402EA1004F6506 /* HomeViewController.swift */,
+				28A38D8622402EA1004F6506 /* HomeViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +269,7 @@
 			files = (
 				28A38D5E22401A64004F6506 /* LaunchScreen.storyboard in Resources */,
 				28A38D5B22401A64004F6506 /* Assets.xcassets in Resources */,
-				28A38D5622401A62004F6506 /* Main.storyboard in Resources */,
+				28A38D8822402EA1004F6506 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28A38D5322401A62004F6506 /* ViewController.swift in Sources */,
+				28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */,
 				28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */,
 				28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */,
+				28A38D8722402EA1004F6506 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		28A38D5422401A62004F6506 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28A38D5522401A62004F6506 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		28A38D5C22401A64004F6506 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
