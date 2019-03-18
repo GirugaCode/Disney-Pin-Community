@@ -18,10 +18,15 @@ class NewsTableViewCell: UITableViewCell {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
+    var news: News! {
+        didSet {
+            updateUI()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        updateUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,8 +36,11 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
+        articleThumbnail.image = UIImage(named: news.thumbnailFileName)
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true
+        
+        articleTitle.text = news.authorName
     }
     
 }

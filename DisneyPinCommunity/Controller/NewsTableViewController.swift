@@ -9,6 +9,8 @@
 import UIKit
 
 class NewsTableViewController: UITableViewController {
+    
+    var videos: [News] = News.fetchVideos()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +29,17 @@ class NewsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-        
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return videos.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
+        let video = videos[indexPath.row]
+        cell.news = video
+        return cell
     }
 
     /*
