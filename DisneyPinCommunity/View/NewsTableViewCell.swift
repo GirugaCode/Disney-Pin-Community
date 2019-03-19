@@ -6,6 +6,10 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/*
+ Custom Cell for Disney Pin News
+ */
+
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {

@@ -19,6 +19,8 @@
 		28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9522403DFD004F6506 /* NewsTableViewCell.swift */; };
 		28A38D9822403DFD004F6506 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D9622403DFD004F6506 /* NewsTableViewCell.xib */; };
 		28A38D9A22404DC5004F6506 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9922404DC5004F6506 /* News.swift */; };
+		28A38D9C2240B015004F6506 /* DisneyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9B2240B015004F6506 /* DisneyNews.swift */; };
+		28A38DA322417D9D004F6506 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA222417D9D004F6506 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		28A38D9522403DFD004F6506 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		28A38D9622403DFD004F6506 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		28A38D9922404DC5004F6506 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		28A38D9B2240B015004F6506 /* DisneyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyNews.swift; sourceTree = "<group>"; };
+		28A38DA222417D9D004F6506 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				28A38D8A22402F03004F6506 /* Model */,
 				28A38D8B22402F07004F6506 /* View */,
 				28A38D8C22402F11004F6506 /* Controller */,
+				28A38DA122417D8B004F6506 /* Helpers */,
+				28A38D9D22417A3E004F6506 /* Networking */,
 				28A38D5A22401A64004F6506 /* Assets.xcassets */,
 				28A38D5C22401A64004F6506 /* LaunchScreen.storyboard */,
 				28A38D5F22401A64004F6506 /* Info.plist */,
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				28A38D9922404DC5004F6506 /* News.swift */,
+				28A38D9B2240B015004F6506 /* DisneyNews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +177,45 @@
 				28A38D9222403D06004F6506 /* NewsTableViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		28A38D9D22417A3E004F6506 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				28A38D9E22417A67004F6506 /* Service */,
+				28A38D9F22417A74004F6506 /* Encoding */,
+				28A38DA022417A8A004F6506 /* HTTP */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		28A38D9E22417A67004F6506 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		28A38D9F22417A74004F6506 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		28A38DA022417A8A004F6506 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		28A38DA122417D8B004F6506 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				28A38DA222417D9D004F6506 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +356,8 @@
 				28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */,
 				28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */,
 				28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */,
+				28A38D9C2240B015004F6506 /* DisneyNews.swift in Sources */,
+				28A38DA322417D9D004F6506 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
