@@ -29,7 +29,10 @@ struct NewsServices {
                     let result = HTTPNetworkResponse.handleNetworkResponse(for: response)
                     switch result {
                     case .success:
+//                        let jsonResult = try? JSONSerialization.jsonObject(with: unwrappedData, options: [])
+//                        print(jsonResult)
                         let result = try? JSONDecoder().decode([String: [DisneyNews]].self, from: unwrappedData)
+                        print(result)
                         // FIX THIS: Fatal error found while trying to unwrap result. I am getting Data but it maybe my model thats no structured correctly
                         completion(Result.success(result!))
                         

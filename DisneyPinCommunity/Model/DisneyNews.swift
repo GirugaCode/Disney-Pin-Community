@@ -11,11 +11,10 @@ import Foundation
 struct DisneyNews: Decodable {
     
     let title: String?
-    let date: Date?
+    let date: String?
     let description: String?
     let picture: String?
     let pictureDescription: String?
-    let comments: String?
 }
 
 struct NewsList: Decodable {
