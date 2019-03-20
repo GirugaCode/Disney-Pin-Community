@@ -10,7 +10,9 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
-    var news: [News] = News.fetchVideos()
+//    var news: [News] = News.fetchVideos()
+    var news = [DisneyNews]()
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,14 @@ class NewsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Disney Pin News"
         
-        
+        NewsServices.shared.getNews { (result) in
+            switch result {
+            case let .success(news):
+                print("I work")
+            case let .failure(error):
+                print(error)
+            }
+        }
         
         tableView.register(
             NewsTableViewCell.nib,
@@ -36,8 +45,10 @@ class NewsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
-        let video = news[indexPath.row]
-        cell.news = video
+//        let disneyNews = NewsList[indexPath.row]
+//        let video = news[indexPath.row]
+//        cell.news = video
+//        cell.news = disneyNews
         return cell
     }
     

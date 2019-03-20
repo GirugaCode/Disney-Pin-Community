@@ -1,16 +1,18 @@
 //
-//  Constants.swift
+//  HTTPNetworkRoute.swift
 //  DisneyPinCommunity
 //
 //  Created by Ryan Nguyen on 3/19/19.
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
-import Foundation
-import UIKit
+/*
+ Gets the endpoint of the API
+ */
 
-struct Constants {
+import Foundation
+
+public enum HTTPNetworkRoute: String {
     
-    static let DISNEY_PIN_NEWS_API_URL = "https://disney-pin-news-api.herokuapp.com"
-    
+    case articles = "/api/news"
 }

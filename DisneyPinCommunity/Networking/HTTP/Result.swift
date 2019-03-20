@@ -1,16 +1,20 @@
 //
-//  Constants.swift
+//  Result.swift
 //  DisneyPinCommunity
 //
 //  Created by Ryan Nguyen on 3/19/19.
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
-import Foundation
-import UIKit
+/*
+Determines Sucess or Failure for URLSessions
+ */
 
-struct Constants {
+import Foundation
+
+enum Result<T> {
     
-    static let DISNEY_PIN_NEWS_API_URL = "https://disney-pin-news-api.herokuapp.com"
+    case success(T)
+    case failure(Error)
     
 }

@@ -6,6 +6,10 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/*
+ Static Fake News for testing UI
+ */
+
 import Foundation
 
 struct News {

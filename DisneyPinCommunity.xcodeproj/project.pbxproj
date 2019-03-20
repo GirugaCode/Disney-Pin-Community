@@ -21,6 +21,14 @@
 		28A38D9A22404DC5004F6506 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9922404DC5004F6506 /* News.swift */; };
 		28A38D9C2240B015004F6506 /* DisneyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9B2240B015004F6506 /* DisneyNews.swift */; };
 		28A38DA322417D9D004F6506 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA222417D9D004F6506 /* Constants.swift */; };
+		28A38DA5224190BE004F6506 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA4224190BE004F6506 /* HTTPMethod.swift */; };
+		28A38DA722419367004F6506 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA622419367004F6506 /* Result.swift */; };
+		28A38DA922419497004F6506 /* HTTPNetworkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA822419497004F6506 /* HTTPNetworkRoute.swift */; };
+		28A38DAB22419586004F6506 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DAA22419586004F6506 /* HTTPNetworkResponse.swift */; };
+		28A38DAD224195FC004F6506 /* HTTPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DAC224195FC004F6506 /* HTTPNetworkError.swift */; };
+		28A38DAF22419621004F6506 /* HTTPNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DAE22419621004F6506 /* HTTPNetworkRequest.swift */; };
+		28A38DB122419786004F6506 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DB022419786004F6506 /* URLEncoder.swift */; };
+		28A38DB3224197E9004F6506 /* NewsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DB2224197E9004F6506 /* NewsServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		28A38D9922404DC5004F6506 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		28A38D9B2240B015004F6506 /* DisneyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyNews.swift; sourceTree = "<group>"; };
 		28A38DA222417D9D004F6506 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		28A38DA4224190BE004F6506 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		28A38DA622419367004F6506 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		28A38DA822419497004F6506 /* HTTPNetworkRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkRoute.swift; sourceTree = "<group>"; };
+		28A38DAA22419586004F6506 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
+		28A38DAC224195FC004F6506 /* HTTPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkError.swift; sourceTree = "<group>"; };
+		28A38DAE22419621004F6506 /* HTTPNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkRequest.swift; sourceTree = "<group>"; };
+		28A38DB022419786004F6506 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
+		28A38DB2224197E9004F6506 /* NewsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +208,7 @@
 		28A38D9E22417A67004F6506 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				28A38DB2224197E9004F6506 /* NewsServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -199,6 +216,7 @@
 		28A38D9F22417A74004F6506 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
+				28A38DB022419786004F6506 /* URLEncoder.swift */,
 			);
 			path = Encoding;
 			sourceTree = "<group>";
@@ -206,6 +224,12 @@
 		28A38DA022417A8A004F6506 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
+				28A38DAE22419621004F6506 /* HTTPNetworkRequest.swift */,
+				28A38DAC224195FC004F6506 /* HTTPNetworkError.swift */,
+				28A38DAA22419586004F6506 /* HTTPNetworkResponse.swift */,
+				28A38DA822419497004F6506 /* HTTPNetworkRoute.swift */,
+				28A38DA622419367004F6506 /* Result.swift */,
+				28A38DA4224190BE004F6506 /* HTTPMethod.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -350,13 +374,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A38DB122419786004F6506 /* URLEncoder.swift in Sources */,
+				28A38DAF22419621004F6506 /* HTTPNetworkRequest.swift in Sources */,
 				28A38D9322403D06004F6506 /* NewsTableViewController.swift in Sources */,
 				28A38D9A22404DC5004F6506 /* News.swift in Sources */,
 				28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */,
 				28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */,
 				28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */,
+				28A38DA5224190BE004F6506 /* HTTPMethod.swift in Sources */,
+				28A38DA922419497004F6506 /* HTTPNetworkRoute.swift in Sources */,
+				28A38DA722419367004F6506 /* Result.swift in Sources */,
 				28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */,
 				28A38D9C2240B015004F6506 /* DisneyNews.swift in Sources */,
+				28A38DAB22419586004F6506 /* HTTPNetworkResponse.swift in Sources */,
+				28A38DAD224195FC004F6506 /* HTTPNetworkError.swift in Sources */,
+				28A38DB3224197E9004F6506 /* NewsServices.swift in Sources */,
 				28A38DA322417D9D004F6506 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
