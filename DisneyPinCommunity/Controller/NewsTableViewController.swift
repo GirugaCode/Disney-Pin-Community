@@ -46,9 +46,6 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
         cell.sourceItem = news[indexPath.row]
-//        let disneyNews = NewsList[indexPath.row]
-//        let video = news[indexPath.row]
-//        cell.news = video
         return cell
     }
     
@@ -62,8 +59,6 @@ class NewsTableViewController: UITableViewController {
             switch newsGetResult {
             case let .success(articles):
                 self.news = articles
-                print("articles")
-                print(self.news)
             case let .failure(error):
                 print(error)
             }

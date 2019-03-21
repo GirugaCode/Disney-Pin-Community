@@ -15,6 +15,7 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var articleThumbnail: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
+    @IBOutlet weak var articleDate: UILabel!
     
     static let identifier = "NewsTableViewCell"
     
@@ -43,9 +44,33 @@ class NewsTableViewCell: UITableViewCell {
     func updateUI() {
         guard let sourceItem = sourceItem else { return }
         articleTitle.text = sourceItem.title
+        articleDate.text = sourceItem.date
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true
         
+        
+        if let imageUrl = sourceItem.picture {
+            guard let url = URL(string: imageUrl) else { return }
+            let request = URLRequest(url: url)
+            
+            let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                if error == nil {
+                    let loadedImage = UIImage(data: data!)
+                    print("item appended")
+                    DispatchQueue.main.async {
+                        self.articleThumbnail.image = loadedImage
+                    }
+                    
+                }
+            }
+            task.resume()
+        } else {
+            articleThumbnail.image = #imageLiteral(resourceName: "v2")
+        }
+        
     }
+    
+    
     
 }
