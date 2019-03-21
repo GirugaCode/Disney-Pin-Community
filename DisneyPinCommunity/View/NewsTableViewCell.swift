@@ -16,17 +16,18 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var articleThumbnail: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     
-    static let identifier = "ArticleCell"
+    static let identifier = "NewsTableViewCell"
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
-    var news: News! {
+    var news: DisneyNews! {
         didSet {
             updateUI()
         }
     }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,11 +41,11 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
-        articleThumbnail.image = UIImage(named: news.thumbnailFileName)
+//        articleThumbnail.image = UIImage(named: news.thumbnailFileName)
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true
         
-        articleTitle.text = news.authorName
+//        articleTitle.text = news.title
     }
     
 }

@@ -19,7 +19,7 @@ struct NewsServices {
     
     let postSession = URLSession(configuration: .default)
     
-    func getNews(_ completion: @escaping (Result<[String: [DisneyNews]]>) -> ()) {
+    func getNews(_ completion: @escaping (Result<[DisneyNews]>) -> ()) {
         do{
             let request = try HTTPNetworkRequest.configureHTTPRequest(from: .articles, with: nil, and: .get, contains: nil)
             postSession.dataTask(with: request) { (data, res, err) in
@@ -29,12 +29,9 @@ struct NewsServices {
                     let result = HTTPNetworkResponse.handleNetworkResponse(for: response)
                     switch result {
                     case .success:
-//                        let jsonResult = try? JSONSerialization.jsonObject(with: unwrappedData, options: [])
-//                        print(jsonResult)
-                        let result = try? JSONDecoder().decode([String: [DisneyNews]].self, from: unwrappedData)
-                        print(result)
-                        // FIX THIS: Fatal error found while trying to unwrap result. I am getting Data but it maybe my model thats no structured correctly
-                        completion(Result.success(result!))
+                        let result = try? JSONDecoder().decode(NewsList.self, from: unwrappedData)
+                        guard let unwrappedResult = result?.articles else { return }
+                        completion(Result.success(unwrappedResult)) 
                         
                     case .failure:
                         completion(Result.failure(HTTPNetworkError.decodingFailed))
