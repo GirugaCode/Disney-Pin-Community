@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282501832244407A0098D6E4 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282501812244407A0098D6E4 /* NewsDetailsViewController.swift */; };
+		282501842244407A0098D6E4 /* NewsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282501822244407A0098D6E4 /* NewsDetailsViewController.xib */; };
 		28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5022401A62004F6506 /* AppDelegate.swift */; };
 		28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5722401A62004F6506 /* DisneyPinCommunity.xcdatamodeld */; };
 		28A38D5B22401A64004F6506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D5A22401A64004F6506 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282501812244407A0098D6E4 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		282501822244407A0098D6E4 /* NewsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsViewController.xib; sourceTree = "<group>"; };
 		28A38D4D22401A62004F6506 /* DisneyPinCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyPinCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A38D5022401A62004F6506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28A38D5822401A62004F6506 /* DisneyPinCommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyPinCommunity.xcdatamodel; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 			children = (
 				28A38D9122403D06004F6506 /* NewsTableViewController.swift */,
 				28A38D9222403D06004F6506 /* NewsTableViewController.xib */,
+				282501812244407A0098D6E4 /* NewsDetailsViewController.swift */,
+				282501822244407A0098D6E4 /* NewsDetailsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				28A38D5E22401A64004F6506 /* LaunchScreen.storyboard in Resources */,
 				28A38D9422403D06004F6506 /* NewsTableViewController.xib in Resources */,
 				28A38D9822403DFD004F6506 /* NewsTableViewCell.xib in Resources */,
+				282501842244407A0098D6E4 /* NewsDetailsViewController.xib in Resources */,
 				28A38D5B22401A64004F6506 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +387,7 @@
 				28A38D9A22404DC5004F6506 /* News.swift in Sources */,
 				28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */,
 				28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */,
+				282501832244407A0098D6E4 /* NewsDetailsViewController.swift in Sources */,
 				28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */,
 				28A38DA5224190BE004F6506 /* HTTPMethod.swift in Sources */,
 				28A38DA922419497004F6506 /* HTTPNetworkRoute.swift in Sources */,

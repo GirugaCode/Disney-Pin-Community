@@ -10,10 +10,8 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
-//    var news: [News] = News.fetchVideos()
     var news = [DisneyNews]()
-//    var news: [DisneyNews] = []
-    
+    private var selectedDisneyNews: DisneyNews?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +19,14 @@ class NewsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Disney Pin News"
         
-//        reloadDataSource()
         
         tableView.register(
             NewsTableViewCell.nib,
             forCellReuseIdentifier: NewsTableViewCell.identifier
         )
 
-        
         reloadDataSource()
     
-
     }
 
     // MARK: - Table view data source
@@ -50,7 +45,10 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        let selectedNews = news[indexPath.row]
+        let newsDetailVc = NewsDetailsViewController.instantiate()
+        newsDetailVc.selectedNews = selectedNews
+        navigationController?.pushViewController(newsDetailVc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
