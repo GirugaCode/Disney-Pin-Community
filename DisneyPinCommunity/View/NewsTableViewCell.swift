@@ -22,7 +22,7 @@ class NewsTableViewCell: UITableViewCell {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
-    var news: DisneyNews! {
+    var sourceItem: DisneyNews! {
         didSet {
             updateUI()
         }
@@ -41,11 +41,11 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
-//        articleThumbnail.image = UIImage(named: news.thumbnailFileName)
+        guard let sourceItem = sourceItem else { return }
+        articleTitle.text = sourceItem.title
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true
         
-//        articleTitle.text = news.title
     }
     
 }
