@@ -24,6 +24,25 @@ class NewsDetailsViewController: UIViewController {
         articleTitle.text = selectedNews?.title
         articleDate.text = selectedNews?.date
         articleDescription.text = selectedNews?.description
+        
+        if let imageUrl = selectedNews?.picture {
+            guard let url = URL(string: imageUrl) else { return }
+            let request = URLRequest(url: url)
+            
+            let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                if error == nil {
+                    let loadedImage = UIImage(data: data!)
+                    DispatchQueue.main.async {
+                        self.articleImage.image = loadedImage
+                    }
+                    
+                }
+            }
+            task.resume()
+        } else {
+            articleImage.image = #imageLiteral(resourceName: "v2")
+        }
     }
 
 

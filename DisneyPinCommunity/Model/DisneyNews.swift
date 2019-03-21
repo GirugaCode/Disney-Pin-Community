@@ -20,33 +20,3 @@ struct DisneyNews: Decodable {
 struct NewsList: Decodable {
     let articles : [DisneyNews]
 }
-
-//extension DisneyNews {
-//
-//    enum NewsKeys: String, CodingKey {
-//        case id
-//        case title
-//        case date
-//        case description
-//        case picture
-//        case pictureDescription
-//        case __v
-//    }
-//
-//    enum PictureURLKeys: String, CodingKey {
-//        case imageURL = "850px"
-//    }
-//
-//    init(from decoder: Decoder) throws {
-//        let newsContainer = try decoder.container(keyedBy: NewsKeys.self)
-//
-//        id = try newsContainer.decode(Int.self, forKey: .id)
-//        title = try newsContainer.decode(String.self, forKey: .title)
-//        date = try newsContainer.decode(String.self, forKey: .date)
-//        description = try newsContainer.decode(String.self, forKey: .description)
-//        pictureDescription = try newsContainer.decode(String.self, forKey: .pictureDescription)
-//
-//        let newsImageContainer = try newsContainer.nestedContainer(keyedBy: PictureURLKeys.self, forKey: .pictureURL)
-//        pictureURL = try newsImageContainer.decode(String.self, forKey: .imageURL)
-//    }
-//}

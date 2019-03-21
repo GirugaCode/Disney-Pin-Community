@@ -57,7 +57,6 @@ class NewsTableViewCell: UITableViewCell {
                 
                 if error == nil {
                     let loadedImage = UIImage(data: data!)
-                    print("item appended")
                     DispatchQueue.main.async {
                         self.articleThumbnail.image = loadedImage
                     }
