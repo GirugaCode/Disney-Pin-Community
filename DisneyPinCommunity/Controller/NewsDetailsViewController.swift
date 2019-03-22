@@ -24,6 +24,7 @@ class NewsDetailsViewController: UIViewController {
         articleTitle.text = selectedNews?.title
         articleDate.text = selectedNews?.date
         articleDescription.text = selectedNews?.description
+        articleDescription.adjustsFontSizeToFitWidth = true
         
         if let imageUrl = selectedNews?.picture {
             guard let url = URL(string: imageUrl) else { return }
