@@ -14,18 +14,32 @@ class NewsDetailsViewController: UIViewController {
     @IBOutlet weak var articleDate: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
     
+    let dateFormatterGet = Date()
     var selectedNews: DisneyNews?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
+    }
+    
+    private func updateUI() {
+        guard let date = selectedNews?.date else { return }
+        let strippedDate  = String(date.prefix(10))
+        
+        let cleanedDate = dateFormatterGet.getFormattedDate(dateString: strippedDate, formatter: "MMM dd,yyyy")
         
         articleTitle.text = selectedNews?.title
-        articleDate.text = selectedNews?.date
+        articleDate.text = String(describing: cleanedDate)
         articleDescription.text = selectedNews?.description
         articleDescription.adjustsFontSizeToFitWidth = true
         
+        loadImages()
+    }
+    
+    private func loadImages() {
+    
         if let imageUrl = selectedNews?.picture {
             guard let url = URL(string: imageUrl) else { return }
             let request = URLRequest(url: url)
@@ -45,16 +59,4 @@ class NewsDetailsViewController: UIViewController {
             articleImage.image = #imageLiteral(resourceName: "v2")
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -18,7 +18,6 @@ class NewsTableViewController: UITableViewController {
         
         self.title = "Disney Pin News"
         
-        
         tableView.register(
             NewsTableViewCell.nib,
             forCellReuseIdentifier: NewsTableViewCell.identifier

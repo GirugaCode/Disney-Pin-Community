@@ -17,6 +17,8 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleDate: UILabel!
     
+    let dateFormatterGet = Date()
+
     static let identifier = "NewsTableViewCell"
     
     static var nib: UINib {
@@ -29,26 +31,22 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func updateUI() {
         guard let sourceItem = sourceItem else { return }
+        guard let date = sourceItem.date else { return }
+        let strippedDate  = String(date.prefix(10))
+
+        let cleanedDate = dateFormatterGet.getFormattedDate(dateString: strippedDate, formatter: "MMM dd,yyyy")
+        
         articleTitle.text = sourceItem.title
-        articleDate.text = sourceItem.date
+        articleDate.text = String(describing: cleanedDate)
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true
         
-        
+        loadImages()
+    }
+    
+    private func loadImages() {
         if let imageUrl = sourceItem.picture {
             guard let url = URL(string: imageUrl) else { return }
             let request = URLRequest(url: url)
@@ -67,7 +65,6 @@ class NewsTableViewCell: UITableViewCell {
         } else {
             articleThumbnail.image = #imageLiteral(resourceName: "v2")
         }
-        
     }
-    
 }
+

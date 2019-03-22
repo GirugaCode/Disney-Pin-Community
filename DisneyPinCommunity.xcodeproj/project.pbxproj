@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		282501832244407A0098D6E4 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282501812244407A0098D6E4 /* NewsDetailsViewController.swift */; };
 		282501842244407A0098D6E4 /* NewsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282501822244407A0098D6E4 /* NewsDetailsViewController.xib */; };
+		28250186224585FF0098D6E4 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28250185224585FF0098D6E4 /* DateFormatterExtension.swift */; };
 		28A38D5122401A62004F6506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5022401A62004F6506 /* AppDelegate.swift */; };
 		28A38D5922401A62004F6506 /* DisneyPinCommunity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D5722401A62004F6506 /* DisneyPinCommunity.xcdatamodeld */; };
 		28A38D5B22401A64004F6506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D5A22401A64004F6506 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		282501812244407A0098D6E4 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		282501822244407A0098D6E4 /* NewsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsViewController.xib; sourceTree = "<group>"; };
+		28250185224585FF0098D6E4 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		28A38D4D22401A62004F6506 /* DisneyPinCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyPinCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A38D5022401A62004F6506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28A38D5822401A62004F6506 /* DisneyPinCommunity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyPinCommunity.xcdatamodel; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				28A38D8122402C94004F6506 /* UIViewControllerExtensions.swift */,
+				28250185224585FF0098D6E4 /* DateFormatterExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			files = (
 				28A38DB122419786004F6506 /* URLEncoder.swift in Sources */,
 				28A38DAF22419621004F6506 /* HTTPNetworkRequest.swift in Sources */,
+				28250186224585FF0098D6E4 /* DateFormatterExtension.swift in Sources */,
 				28A38D9322403D06004F6506 /* NewsTableViewController.swift in Sources */,
 				28A38D9A22404DC5004F6506 /* News.swift in Sources */,
 				28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */,
