@@ -31,6 +31,11 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        articleThumbnail.image = nil
+    }
+    
     func updateUI() {
         guard let sourceItem = sourceItem else { return }
         guard let date = sourceItem.date else { return }
