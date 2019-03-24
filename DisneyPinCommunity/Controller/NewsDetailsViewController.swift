@@ -22,6 +22,14 @@ class NewsDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(addTapped))
+
+    }
+    
+    @objc func addTapped() {
+        print("Tapped Button!")
+        let activityController = UIActivityViewController(activityItems: [articleTitle.text as Any, articleImage.image as Any], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
     }
     
     private func updateUI() {
