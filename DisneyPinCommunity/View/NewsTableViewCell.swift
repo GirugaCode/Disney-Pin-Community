@@ -18,6 +18,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var articleDate: UILabel!
     
     let dateFormatterGet = Date()
+    let imageCache = NSCache<AnyObject, AnyObject>()
 
     static let identifier = "NewsTableViewCell"
     
@@ -56,12 +57,19 @@ class NewsTableViewCell: UITableViewCell {
             guard let url = URL(string: imageUrl) else { return }
             let request = URLRequest(url: url)
             
+            if let imageFromCache = imageCache.object(forKey: imageUrl as AnyObject) {
+                self.articleThumbnail.image = imageFromCache as? UIImage
+                return
+            }
+            
             let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
                 
                 if error == nil {
                     let loadedImage = UIImage(data: data!)
                     DispatchQueue.main.async {
-                        self.articleThumbnail.image = loadedImage
+                        let imageToCache = loadedImage
+                        self.imageCache.setObject(imageToCache!, forKey: imageUrl as AnyObject)
+                        self.articleThumbnail.image = imageToCache
                     }
                     
                 }
