@@ -18,9 +18,8 @@ class NewsTableViewCell: UITableViewCell {
             containerView.layer.cornerRadius = 10
             containerView.layer.shadowOpacity = 1
             containerView.layer.shadowRadius = 2
-            containerView.layer.shadowColor = UIColor(named: "Orange")?.cgColor
-            containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
-            containerView.backgroundColor = .red
+            containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
+            containerView.backgroundColor = .blue
         }
     }
     @IBOutlet weak var articleThumbnail: UIImageView!
@@ -92,7 +91,7 @@ class NewsTableViewCell: UITableViewCell {
             }
             task.resume()
         } else {
-            articleThumbnail.image = #imageLiteral(resourceName: "v2")
+            articleThumbnail.image = #imageLiteral(resourceName: "v1")
         }
     }
 }

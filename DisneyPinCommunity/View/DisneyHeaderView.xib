@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KXy-vu-UZk" userLabel="DisneyHeaderView" customClass="DisneyHeaderView" customModule="DisneyPinCommunity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-ym-9iH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-p2-6Ov">
+                            <rect key="frame" x="140" y="32" width="95.5" height="36"/>
+                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Vzy-p2-6Ov" firstAttribute="centerY" secondItem="V98-2d-5Kx" secondAttribute="centerY" id="DW3-rX-UFk"/>
+                        <constraint firstItem="Vzy-p2-6Ov" firstAttribute="centerX" secondItem="V98-2d-5Kx" secondAttribute="centerX" id="ReY-XF-uvv"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="V98-2d-5Kx"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eGv-ym-9iH" firstAttribute="bottom" secondItem="DDi-3u-yjS" secondAttribute="bottom" id="9Dc-lj-x1h"/>
+                <constraint firstItem="eGv-ym-9iH" firstAttribute="leading" secondItem="DDi-3u-yjS" secondAttribute="leading" id="Krb-uE-cEB"/>
+                <constraint firstItem="eGv-ym-9iH" firstAttribute="top" secondItem="DDi-3u-yjS" secondAttribute="top" id="ibf-SS-bSG"/>
+                <constraint firstItem="eGv-ym-9iH" firstAttribute="trailing" secondItem="DDi-3u-yjS" secondAttribute="trailing" id="th4-z3-ARf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="DDi-3u-yjS"/>
+            <connections>
+                <outlet property="headerLabel" destination="Vzy-p2-6Ov" id="d8f-6j-Zav"/>
+            </connections>
+            <point key="canvasLocation" x="-207.19999999999999" y="-173.61319340329837"/>
+        </view>
+    </objects>
+</document>

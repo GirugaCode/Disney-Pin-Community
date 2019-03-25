@@ -17,7 +17,7 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Disney Pin News"
+        self.title = "Disney Pin Community"
         
         reloadDataSource()
         refreshTableView()
@@ -27,6 +27,8 @@ class NewsTableViewController: UITableViewController {
             forCellReuseIdentifier: NewsTableViewCell.identifier
         )
         
+        let headerNib = UINib.init(nibName: "DisneyHeaderView", bundle: Bundle.main)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "DisneyHeaderView")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,6 +49,18 @@ class NewsTableViewController: UITableViewController {
         newsDetailVc.selectedNews = selectedNews
         navigationController?.pushViewController(newsDetailVc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DisneyHeaderView") as! DisneyHeaderView
+
+        headerView.headerLabel.text = "Disney Pin News"
+
+        return headerView
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 250
     }
     
     private func reloadDataSource() {
