@@ -19,7 +19,7 @@ class NewsTableViewCell: UITableViewCell {
             containerView.layer.shadowOpacity = 1
             containerView.layer.shadowRadius = 2
             containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
-            containerView.backgroundColor = .blue
+            containerView.backgroundColor = #colorLiteral(red: 0.6977917552, green: 0.2771682143, blue: 0.6858698726, alpha: 1)
         }
     }
     @IBOutlet weak var articleThumbnail: UIImageView!
@@ -91,7 +91,7 @@ class NewsTableViewCell: UITableViewCell {
             }
             task.resume()
         } else {
-            articleThumbnail.image = #imageLiteral(resourceName: "v1")
+            articleThumbnail.image = #imageLiteral(resourceName: "Disney Pin Community logo")
         }
     }
 }

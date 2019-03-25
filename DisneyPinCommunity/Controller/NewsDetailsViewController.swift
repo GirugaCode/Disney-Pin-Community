@@ -64,7 +64,7 @@ class NewsDetailsViewController: UIViewController {
             }
             task.resume()
         } else {
-            articleImage.image = #imageLiteral(resourceName: "v2")
+            articleImage.image = #imageLiteral(resourceName: "Disney Pin Community logo")
         }
     }
 }

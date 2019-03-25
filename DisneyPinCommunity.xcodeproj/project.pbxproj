@@ -23,7 +23,6 @@
 		28A38D9422403D06004F6506 /* NewsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D9222403D06004F6506 /* NewsTableViewController.xib */; };
 		28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9522403DFD004F6506 /* NewsTableViewCell.swift */; };
 		28A38D9822403DFD004F6506 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A38D9622403DFD004F6506 /* NewsTableViewCell.xib */; };
-		28A38D9A22404DC5004F6506 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9922404DC5004F6506 /* News.swift */; };
 		28A38D9C2240B015004F6506 /* DisneyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38D9B2240B015004F6506 /* DisneyNews.swift */; };
 		28A38DA322417D9D004F6506 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA222417D9D004F6506 /* Constants.swift */; };
 		28A38DA5224190BE004F6506 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38DA4224190BE004F6506 /* HTTPMethod.swift */; };
@@ -76,7 +75,6 @@
 		28A38D9222403D06004F6506 /* NewsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewController.xib; sourceTree = "<group>"; };
 		28A38D9522403DFD004F6506 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		28A38D9622403DFD004F6506 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
-		28A38D9922404DC5004F6506 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		28A38D9B2240B015004F6506 /* DisneyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyNews.swift; sourceTree = "<group>"; };
 		28A38DA222417D9D004F6506 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		28A38DA4224190BE004F6506 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 		28A38D8A22402F03004F6506 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				28A38D9922404DC5004F6506 /* News.swift */,
 				28A38D9B2240B015004F6506 /* DisneyNews.swift */,
 			);
 			path = Model;
@@ -395,7 +392,6 @@
 				28A38DAF22419621004F6506 /* HTTPNetworkRequest.swift in Sources */,
 				28250186224585FF0098D6E4 /* DateFormatterExtension.swift in Sources */,
 				28A38D9322403D06004F6506 /* NewsTableViewController.swift in Sources */,
-				28A38D9A22404DC5004F6506 /* News.swift in Sources */,
 				28A38D8222402C94004F6506 /* UIViewControllerExtensions.swift in Sources */,
 				28A38D9722403DFD004F6506 /* NewsTableViewCell.swift in Sources */,
 				282501832244407A0098D6E4 /* NewsDetailsViewController.swift in Sources */,
