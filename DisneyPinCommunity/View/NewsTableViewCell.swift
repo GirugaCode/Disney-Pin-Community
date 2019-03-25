@@ -13,6 +13,16 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
+    @IBOutlet weak var containerView: UIView! {
+        didSet {
+            containerView.layer.cornerRadius = 10
+            containerView.layer.shadowOpacity = 1
+            containerView.layer.shadowRadius = 2
+            containerView.layer.shadowColor = UIColor(named: "Orange")?.cgColor
+            containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
+            containerView.backgroundColor = .red
+        }
+    }
     @IBOutlet weak var articleThumbnail: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleDate: UILabel!
@@ -37,6 +47,11 @@ class NewsTableViewCell: UITableViewCell {
         articleThumbnail.image = nil
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+    
     func updateUI() {
         guard let sourceItem = sourceItem else { return }
         guard let date = sourceItem.date else { return }
@@ -45,6 +60,7 @@ class NewsTableViewCell: UITableViewCell {
         let cleanedDate = dateFormatterGet.getFormattedDate(dateString: strippedDate, formatter: "MMM dd,yyyy")
         
         articleTitle.text = sourceItem.title
+        articleTitle.adjustsFontSizeToFitWidth = true
         articleDate.text = String(describing: cleanedDate)
         articleThumbnail.layer.cornerRadius = 8.0
         articleThumbnail.layer.masksToBounds = true

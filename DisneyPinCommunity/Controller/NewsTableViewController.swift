@@ -26,6 +26,7 @@ class NewsTableViewController: UITableViewController {
             NewsTableViewCell.nib,
             forCellReuseIdentifier: NewsTableViewCell.identifier
         )
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
