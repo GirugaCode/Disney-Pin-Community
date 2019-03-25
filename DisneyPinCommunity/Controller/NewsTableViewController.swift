@@ -11,6 +11,7 @@ import UIKit
 class NewsTableViewController: UITableViewController {
     
     var news = [DisneyNews]()
+    lazy var refreshController = UIRefreshControl()
     private var selectedDisneyNews: DisneyNews?
     
     override func viewDidLoad() {
@@ -18,17 +19,14 @@ class NewsTableViewController: UITableViewController {
         
         self.title = "Disney Pin News"
         
+        reloadDataSource()
+        refreshTableView()
+        
         tableView.register(
             NewsTableViewCell.nib,
             forCellReuseIdentifier: NewsTableViewCell.identifier
         )
-
-        reloadDataSource()
-    
     }
-
-    // MARK: - Table view data source
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -62,5 +60,20 @@ class NewsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    private func refreshTableView() {
+        
+        refreshController.attributedTitle = NSAttributedString(string: "Refreshing")
+        refreshController.tintColor = .red
+        refreshController.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshController) // not required when using UITableViewController
+        
+    }
+    
+    @objc func refresh() {
+        // Code to refresh table view
+        tableView.reloadData()
+        refreshController.endRefreshing()
     }
 }
