@@ -28,29 +28,29 @@
                     <rect key="frame" x="10" y="30" width="355" height="627"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-bO-dkI">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="208"/>
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="163"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oVK-bh-qyN">
-                            <rect key="frame" x="0.0" y="230" width="121" height="50"/>
+                            <rect key="frame" x="0.0" y="185" width="104.5" height="112.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31R-4h-tbe">
-                                    <rect key="frame" x="0.0" y="0.0" width="121" height="30"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31R-4h-tbe">
+                                    <rect key="frame" x="0.0" y="0.0" width="104.5" height="92"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOP-Qc-i18">
-                                    <rect key="frame" x="0.0" y="34" width="71.5" height="16"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOP-Qc-i18">
+                                    <rect key="frame" x="0.0" y="96" width="63.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rog-F6-ugw">
-                            <rect key="frame" x="0.0" y="302" width="337" height="325"/>
-                            <mutableString key="text">Article DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle Description</mutableString>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="319.5" width="328" height="307.5"/>
+                            <string key="text">Article DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle DescriptionArticle Description</string>
+                            <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

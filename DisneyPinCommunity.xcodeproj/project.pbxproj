@@ -573,13 +573,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBPU586293;
+				DEVELOPMENT_TEAM = F5JXR2F7P3;
 				INFOPLIST_FILE = DisneyPinCommunity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanhPhu.DisneyPinCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,13 +591,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FBPU586293;
+				DEVELOPMENT_TEAM = F5JXR2F7P3;
 				INFOPLIST_FILE = DisneyPinCommunity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanhPhu.DisneyPinCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

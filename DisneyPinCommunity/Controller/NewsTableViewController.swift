@@ -17,8 +17,7 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Disney Pin Community"
-        
+        navigationUI()
         reloadDataSource()
         refreshTableView()
         
@@ -30,7 +29,12 @@ class NewsTableViewController: UITableViewController {
         let headerNib = UINib.init(nibName: "DisneyHeaderView", bundle: Bundle.main)
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "DisneyHeaderView")
     }
-
+    
+    private func navigationUI() {
+        self.title = "Disney Pin Community"
+        self.tableView.separatorStyle = .none
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return news.count

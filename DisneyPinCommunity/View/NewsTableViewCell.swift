@@ -15,11 +15,7 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView! {
         didSet {
-            containerView.layer.cornerRadius = 10
-            containerView.layer.shadowOpacity = 1
-            containerView.layer.shadowRadius = 2
-            containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
-            containerView.backgroundColor = #colorLiteral(red: 0.6977917552, green: 0.2771682143, blue: 0.6858698726, alpha: 1)
+            previewNewsUI()
         }
     }
     @IBOutlet weak var articleThumbnail: UIImageView!
@@ -51,7 +47,7 @@ class NewsTableViewCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
     
-    func updateUI() {
+    private func updateUI() {
         guard let sourceItem = sourceItem else { return }
         guard let date = sourceItem.date else { return }
         let strippedDate  = String(date.prefix(10))
@@ -65,6 +61,18 @@ class NewsTableViewCell: UITableViewCell {
         articleThumbnail.layer.masksToBounds = true
         
         loadImages()
+    }
+    
+    private func previewNewsUI() {
+        containerView.layer.cornerRadius = 18
+        containerView.layer.shadowRadius = 2
+        containerView.layer.shadowOpacity = 1
+        containerView.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        containerView.layer.shadowOffset = CGSize(width: 0 , height:2)
+        containerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        containerView.layer.borderColor = #colorLiteral(red: 0.974335134, green: 0.5811371803, blue: 0.02610809356, alpha: 1)
+        containerView.layer.borderWidth = 1.4
+
     }
     
     private func loadImages() {
