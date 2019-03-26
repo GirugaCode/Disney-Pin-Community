@@ -33,6 +33,8 @@ class NewsTableViewController: UITableViewController {
     private func navigationUI() {
         self.title = "Disney Pin Community"
         self.tableView.separatorStyle = .none
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9215686275, green: 0.6, blue: 0.2196078431, alpha: 1)
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,4 +97,5 @@ class NewsTableViewController: UITableViewController {
         tableView.reloadData()
         refreshController.endRefreshing()
     }
+    
 }
