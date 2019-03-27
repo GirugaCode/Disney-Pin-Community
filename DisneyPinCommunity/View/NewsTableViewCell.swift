@@ -90,11 +90,11 @@ class NewsTableViewCell: UITableViewCell {
                 if error == nil {
                     let loadedImage = UIImage(data: data!)
                     DispatchQueue.main.async {
-                        let imageToCache = loadedImage
-                        self.imageCache.setObject(imageToCache!, forKey: imageUrl as AnyObject)
+                        guard let imageToCache = loadedImage else { return }
+                        self.imageCache.setObject(imageToCache, forKey: imageUrl as AnyObject)
                         self.articleThumbnail.image = imageToCache
                     }
-                    
+            
                 }
             }
             task.resume()
