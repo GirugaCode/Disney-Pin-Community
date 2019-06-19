@@ -322,13 +322,16 @@
 				TargetAttributes = {
 					28A38D4C22401A62004F6506 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					28A38D6322401A64004F6506 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 28A38D4C22401A62004F6506;
 					};
 					28A38D6E22401A64004F6506 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 28A38D4C22401A62004F6506;
 					};
 				};
@@ -581,7 +584,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DanhPhu.DisneyPinCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -599,7 +602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DanhPhu.DisneyPinCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -619,7 +622,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisneyPinCommunity.app/DisneyPinCommunity";
 			};
@@ -640,7 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisneyPinCommunity.app/DisneyPinCommunity";
 			};
@@ -660,7 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunityUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DisneyPinCommunity;
 			};
@@ -680,7 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanNguyen.DisneyPinCommunityUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DisneyPinCommunity;
 			};
