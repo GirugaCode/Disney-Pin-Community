@@ -70,17 +70,36 @@ class NewsTableViewController: UITableViewController {
     }
     
     private func reloadDataSource() {
-        NewsServices.shared.getNews { (newsGetResult) in
-            switch newsGetResult {
-            case let .success(articles):
-                self.news = articles
-            case let .failure(error):
-                print(error)
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        
+        // Place the activity indicator on the center of your current screen
+        activityIndicator.center = view.center
+        
+        // In most cases this will be set to true, so the indicator hides when it stops spinning
+        activityIndicator.hidesWhenStopped = true
+        
+        // Start the activity indicator and place it onto your view
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+        
+        // Do something here, for example fetch the data from API
+        DispatchQueue.global(qos: .userInitiated).async {
+            NewsServices.shared.getNews { (newsGetResult) in
+                switch newsGetResult {
+                case let .success(articles):
+                    self.news = articles
+                case let .failure(error):
+                    print(error)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    // Finally after the job above is done, stop the activity indicator
+                    activityIndicator.stopAnimating()
+                }
             }
         }
+        
+        
     }
     
     private func refreshTableView() {
